@@ -5,7 +5,6 @@ include/
 lib/
 parts/
 src/
-buildout.cfg
 tmp/
 build-stamp
 debian/
