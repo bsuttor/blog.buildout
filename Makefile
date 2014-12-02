@@ -13,7 +13,7 @@ bin/buildout: bin/python bootstrap.py
 
 .PHONY: buildout
 buildout: bin/buildout
-	bin/buildout -t 7
+	bin/buildout -t 7 -c dev.cfg
 
 .PHONY: heroku
 heroku: bin/buildout
