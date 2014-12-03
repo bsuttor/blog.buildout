@@ -13,4 +13,3 @@ var/
 upgrade.log
 bin/
 local/
-bootstrap.py
