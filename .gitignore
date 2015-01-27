@@ -13,3 +13,4 @@ var/
 upgrade.log
 bin/
 local/
+share/
