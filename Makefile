@@ -23,6 +23,10 @@ heroku: bin/buildout
 run: buildout
 	bin/instance fg
 
+.PHONY: push2heroku
+push2heroku:
+	git push heroku master
+
 .PHONY: cleanall
 cleanall:
 	rm -fr develop-eggs downloads eggs parts .installed.cfg lib include bin .mr.developer.cfg
