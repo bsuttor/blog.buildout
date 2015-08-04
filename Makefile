@@ -29,4 +29,11 @@ push2heroku:
 
 .PHONY: cleanall
 cleanall:
-	rm -fr develop-eggs downloads eggs parts .installed.cfg lib include bin .mr.developer.cfg
+	rm -fr develop-eggs downloads eggs parts .installed.cfg lib include bin .mr.developer.cfg share
+
+backup:
+	rm -rf var/filestorage/*
+	rm -rf var/blobstorage
+	rm -rf var/blobcache
+	./bin/zodbconvert zodbconvert.xml
+	echo "bushy" var/blobcache/.layout
