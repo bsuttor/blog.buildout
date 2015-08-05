@@ -31,7 +31,8 @@ push2heroku:
 cleanall:
 	rm -fr develop-eggs downloads eggs parts .installed.cfg lib include bin .mr.developer.cfg share
 
-backup:
+backup: bin/buildout
+	bin/buildout -Nt 7 -c relstorage-dev.cfg
 	rm -rf var/filestorage/*
 	rm -rf var/blobstorage
 	rm -rf var/blobcache
