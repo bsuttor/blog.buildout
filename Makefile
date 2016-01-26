@@ -38,3 +38,6 @@ backup: bin/buildout
 	rm -rf var/blobcache
 	./bin/zodbconvert zodbconvert.xml
 	echo "bushy" var/blobcache/.layout
+
+purgeherokucache:
+	heroku repo:purge_cache -a bsuttor
